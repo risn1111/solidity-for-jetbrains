@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.3'
+}
+
+group 'com.solidity.jetbrains'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+intellij {
+    version = '2022.1.4' // Safe baseline version
+    type = 'IC'
+    updateSinceUntilBuild = true
+}
+
+patchPluginXml {
+    sinceBuild = "211"
+    untilBuild = "999.SNAPSHOT"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}

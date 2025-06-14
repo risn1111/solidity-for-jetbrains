@@ -1,0 +1,18 @@
+<idea-plugin>
+    <id>com.solidity.jetbrains</id>
+    <name>Solidity for JetBrains</name>
+    <version>1.0</version>
+    <vendor>Solidity Risen</vendor>
+    <idea-version since-build="211.0" until-build="999.SNAPSHOT"/>
+    <icon>icons/solidity.svg</icon>
+
+    <description><![CDATA[
+        A super simple, stable, and basic Solidity language support plugin for JetBrains IDEs. Provides file recognition for .sol files.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.solidity.jetbrains.SolidityPostStartupActivity"/>
+    </extensions>
+</idea-plugin>
